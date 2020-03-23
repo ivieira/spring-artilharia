@@ -2,3 +2,6 @@ docker run --ulimit memlock=-1:-1 -it --rm=true --memory-swappiness=0 \
            --name postgres-spring-artilharia -e POSTGRES_USER=spring \
            -e POSTGRES_PASSWORD=spring -e POSTGRES_DB=artilhariadb \
            -p 5432:5432 postgres:10.5
+
+oc new-app --name spring-artilharia /
+    -i java https://github.com/ivieira/spring-artilharia
